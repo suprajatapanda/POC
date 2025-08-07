@@ -1,0 +1,17 @@
+{
+  "ExtendedData": {
+    "inputs": [
+      "https://wms-document-service-tst.us.aegon.com/DocumentService.asmx"
+    ],
+    "collectionTypes": [
+      "System.Array",
+      "System.Collections.Generic.Dictionary`2"
+    ],
+    "namespaceMappings": [
+      "*, TRS.IT.SI.Services.wsDocumentService"
+    ],
+    "sync": true,
+    "targetFramework": "net9.0",
+    "typeReuseMode": "All"
+  }
+}

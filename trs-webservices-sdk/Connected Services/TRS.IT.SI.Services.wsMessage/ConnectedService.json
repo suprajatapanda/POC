@@ -1,0 +1,17 @@
+{
+  "ExtendedData": {
+    "inputs": [
+      "https://trs-services-tst.us.aegon.com/MessageService.asmx"
+    ],
+    "collectionTypes": [
+      "System.Array",
+      "System.Collections.Generic.Dictionary`2"
+    ],
+    "namespaceMappings": [
+      "*, TRS.IT.SI.Services.wsMessage"
+    ],
+    "sync": true,
+    "targetFramework": "net9.0",
+    "typeReuseMode": "All"
+  }
+}

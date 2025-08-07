@@ -1,0 +1,9 @@
+site_name: bend-fund-wizard-batch-poc-docs
+nav:
+- Home: README.md
+- User Guide: USERGUIDE.md
+- Developer Guide: DEVGUIDE.md
+plugins:
+- techdocs-core
+- same-dir
+docs_dir: .

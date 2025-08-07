@@ -1,0 +1,79 @@
+{
+	"version": "1.0.0.0",
+	"application": {
+		"applicationName": "bend-fund-wizard-batch-poc",
+        "cmdbID": "CI000004242:Workplace DEV-TEST",
+        "channel": "transamerica.workplace.springboard"
+	},
+	"build": {
+    "commandSpec": {
+      "scripts": [
+        {
+          "image": "dotnet/sdk:9.0",
+          "script": [
+            "dotnet restore .",
+            "dotnet build . -c Release",
+            "dotnet publish \"bend-fund-wizard-poc.csproj\" -c Release /p:UseAppHost=false --property:CommonTargetFrameworks=net9.0 --framework net9.0 -o ./publish"
+          ]
+        }
+      ]
+    }
+  },
+  
+  "dockerBuild": [{
+		"DockerFilePath": "Dockerfile",
+		"DockerBuildjenkinsTag": "bend-fund-wizard-batch-poc",
+		"DockerBuildnewTag": "1.0.2-SNAPSHOT",
+		"containerPort": ["80:80"]
+	}],
+	
+	
+	 "batchDeploy": {
+
+		"environments": {
+			"common": [
+				{
+					"resourceContact": "TATechSandINonProdSupport@transamerica.com",
+					"resourcePurpose": "For deploying bend funtion Applications to AWSBatch",
+					"PROJECT": "SPRINGBOARD",
+					"REPOSITORY": "transamerica.workplace-springboard.defined-contribution.batch.bend-fund-wizard-batch-poc",
+					"ARTIFACT_ID": "bend-fund-wizard-batch-poc",
+					"create_job_definition": true,
+					"department": "ta-workplace-springboard",
+					"parameters": null,
+					"platform_capabilities": [ "FARGATE" ],
+					"propagate_tags": true,
+					"attempts": 1,
+					"action": "RETRY",
+					"on_exit_code": "*",
+					"on_reason": "*",
+					"on_status_reason": "*",
+					"attempt_duration_seconds": 3600,
+					"billing_cost_center": "0701-TTA01370 WORKPLACE IT CLOUD PASSTHROUGH",
+					"division": "transamerica",
+					"channel": "transamerica.workplace.springboard",
+					"initiative_type": "RTS",
+					"initiative_id": "RTS-92261",
+					"primary_lob": "Defined Benefits",
+					"application_cmdb": "CI002455878:DIGITAL PLATFORM",
+					"additional_tags": { "map-migrated": "d-server-03tjp5pedqbnoq" }
+				}
+			],
+			"development": [
+				{
+					"docker_memory_min": "1024m",
+					"docker_memory_max": "6144m",
+					"BRANCH_NAME": "TWCJ-1712"
+				}
+			],
+			"test": [
+				{
+					"docker_memory_min": "1024m",
+					"docker_memory_max": "6144m",
+					"BRANCH_NAME": "TWCJ-1712"
+				}
+			]
+		}
+    }
+
+}

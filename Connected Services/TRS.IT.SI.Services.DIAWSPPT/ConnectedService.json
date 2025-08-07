@@ -1,0 +1,17 @@
+{
+  "ExtendedData": {
+    "inputs": [
+      "https://trs-paris3online-tst.us.aegon.com/parisIII/ParticipantServiceWS?wsdl"
+    ],
+    "collectionTypes": [
+      "System.Array",
+      "System.Collections.Generic.Dictionary`2"
+    ],
+    "namespaceMappings": [
+      "*, TRS.IT.SI.Services.DIAWSPPT"
+    ],
+    "sync": true,
+    "targetFramework": "net9.0",
+    "typeReuseMode": "All"
+  }
+}

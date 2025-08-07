@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bend-fund-wizard-batch-poc
+  description: N/A
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    jenkins.io/job-full-name: job/DEV_com.transamerica.mw.platform.pipeline-cicd/build?delay=0sec
+    sonarqube.org/project-key: com.transamerica.workplace-springboard.defined-contribution.batch:bend-fund-wizard-batch-poc
+spec:
+  type: N/A
+  owner: N/A
+  system: N/A
+  lifecycle: N/A

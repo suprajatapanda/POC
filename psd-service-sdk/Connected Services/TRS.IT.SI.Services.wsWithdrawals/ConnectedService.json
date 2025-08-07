@@ -1,0 +1,17 @@
+{
+  "ExtendedData": {
+    "inputs": [
+      "https://psdwebsvctst.us.aegon.com/com.trs.psd.webservices/WithdrawalsService?wsdl"
+    ],
+    "collectionTypes": [
+      "System.Array",
+      "System.Collections.Generic.Dictionary`2"
+    ],
+    "namespaceMappings": [
+      "*, TRS.IT.SI.Services.wsWithdrawals"
+    ],
+    "sync": true,
+    "targetFramework": "net9.0",
+    "typeReuseMode": "All"
+  }
+}

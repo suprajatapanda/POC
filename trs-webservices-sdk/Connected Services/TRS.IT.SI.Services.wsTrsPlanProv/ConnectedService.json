@@ -1,0 +1,17 @@
+{
+  "ExtendedData": {
+    "inputs": [
+      "https://trs-services-tst.us.aegon.com:8443/TRSPlanProvisions/TrsPlanProv.asmx"
+    ],
+    "collectionTypes": [
+      "System.Array",
+      "System.Collections.Generic.Dictionary`2"
+    ],
+    "namespaceMappings": [
+      "*, TRS.IT.SI.Services.wsTrsPlanProv"
+    ],
+    "sync": true,
+    "targetFramework": "net9.0",
+    "typeReuseMode": "All"
+  }
+}
